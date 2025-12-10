@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Issued Successfully</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: green;
+            text-align: center;
+        }
+
+        .details p {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Book Issued Successfully!</h2>
+
+<p><b>Book ID:</b> {{ book['id'] }}</p>
+<p><b>Title:</b> {{ book['title'] }}</p>
+<p><b>Author:</b> {{ book['author'] }}</p>
+<p><b>Student Name:</b> {{ student_name }}</p>
+<p><b>Issue Date:</b> {{ issue_date }}</p>
+<p><b>Return Date:</b> {{ return_date }}</p>
+
+<a href="/" class="back-btn">Back to Home</a>
+
+
+    <a href="/issue_book" class="back-btn">⟵ Issue Another Book</a>
+</div>
+
+</body>
+</html>
